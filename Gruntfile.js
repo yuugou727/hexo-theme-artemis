@@ -1,34 +1,27 @@
-module.exports = function (grunt) {
+//npm i grunt-sass load-grunt-tasks -D
+//npm uninstall grunt-contrib-sass -D
+module.exports = function(grunt) {
+    require('load-grunt-tasks')(grunt);
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
         sass: {
+            options: {
+                sourceMap: false,
+                outputStyle: 'compressed',
+            },
             dist: {
-                options: {
-                    sourcemap: 'none',
-                    style: 'compressed',
-                },
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'source/scss',
-                        src: ['*.scss'],
-                        dest: 'source/css',
-                        ext: '.css'
-                    }
-                ]
+                files: {
+                    'source/css/theme.css': 'source/scss/theme.scss'
+                }
             }
         },
         watch: {
             css: {
                 files: 'source/scss/**/*.scss',
-                tasks: ['sass']
+                tasks: ['sass'],
             }
-        }
+        },
     });
 
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-
-    grunt.registerTask('build', ['sass']);
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('dev', ['watch']);
 }
