@@ -11,11 +11,17 @@ html(lang=config.language)
                     a(href=url_for(), title=config.title)
                         if theme.logo
                             img.logo-image(src=url_for(theme.logo), alt='logo')
-                        else
-                            = config.title
+                        else        
+                            = config.title            
                 include nav.pug
             main.container
-                block container
+                if page.path === "tags/index.html"
+                    .all-categories.tag-content
+                        != list_categories({show_count: false, depth: 2, class: 'nav-category', style: 'list'})
+                    .all-tags.tag-content
+                        != tagcloud({min_font:12, unit: 'pt', color: true, start_color: '#47d6c7', end_color: '#fff'})
+                else
+                    block container
             footer
                 block pagination
                 block copyright
