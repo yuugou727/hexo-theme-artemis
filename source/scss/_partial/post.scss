@@ -5,7 +5,7 @@
 .post-block {
     .post-title {
         margin: 0.65em 0;
-        color: #2c3e50;
+        color: #ddd;
         font-size: 1.5em;
     }
 
@@ -17,14 +17,28 @@
         }
         a.post-from {
             margin-left: 0.5rem;
-            padding: 3px 6px;
-            border-radius: 5px;
-            font-size: 12px;
-            color: white;
-            background-color: #E36B6B;
+            color: #eee;
+            border-bottom: 2px solid #47d6c7;
         }
     }
 }
+
+.post-tags{
+    .tag{
+        color: #47d6c7;
+    }
+}
+
+.post-category{
+    margin-left: 0.5rem;
+    padding: 3px 6px;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #333;
+    background-color: #ddd;
+}
+
 
 .post-content {
     h2, h3, h4, h5, h6 {
@@ -32,12 +46,11 @@
         margin: 1em 0;
         a:before {
             content: "#";
-            color: #42b983;
+            color: #47d6c7;
             position: absolute;
             left: -0.7em;
             top: -4px;
             font-size: 1.2em;
-            font-weight: bold;
         }
     }
     h4, h5, h6 {
@@ -52,20 +65,27 @@
         font-size: 1.3em;
     }
     a {
-        color: #42b983;
+        color: #47d6c7;
         word-break: break-all;
     }
     blockquote {
         margin: 2em 0;
         padding: 0.5em 1.3em;
-        border: 1px solid #eee;
+        border: 1px solid #3D5168;
         border-radius: 3px;
-        border-left-color: #42b983;
+        border-left-color: #47d6c7;
         border-left-width: 4px;
-    }
-    blockquote.warning {
-        border-left-color: #f0ad4e;
-        border-left-width: 4px;
+        background-color: #475667;
+        
+        footer cite:before {
+            content: "—";
+            padding: 0.3em;
+        }
+
+        &.warning {
+            border-left-color: #f0ad4e;
+            border-left-width: 4px;
+        }
     }
     img {
         display: block;
@@ -82,7 +102,7 @@
         border-left: 4px solid #f66;
         border-top-right-radius: 2px;
         border-bottom-right-radius: 2px;
-        background-color: #f8f8f8;
+        background-color: #475667;
         br {
             display: none;
         }
@@ -115,143 +135,5 @@
     z-index: 10;
     #mask-image {
         max-width: 95%;
-    }
-}
-
-code,
-pre {
-    font-size: 0.8em;
-    background-color: #f8f8f8;
-    font-family: 'Roboto Mono', Monaco, courier, monospace;
-}
-
-.highlight {
-    position: relative;
-    margin: 1em 0;
-    border-radius: 2px;
-    line-height: 1.1em;
-    background-color: #f8f8f8;
-    overflow-x: auto;
-    table, tr, td {
-        width: 100%;
-        border-collapse: collapse;
-        padding: 0;
-        margin: 0;
-    }
-    .gutter {
-        display: none;
-    }
-    .code pre {
-        padding: 1.2em 1.4em;
-        line-height: 1.5em;
-        margin: 0;
-        .line {
-            width: auto;
-            height: 18px;
-        }
-    }
-}
-
-%code-base {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #ccc;
-    text-align: right;
-    font-size: 0.75em;
-    padding: 5px 10px 0;
-    line-height: 15px;
-    height: 15px;
-    font-weight: 600;
-}
-
-@mixin code-signs($keys) {
-    @each $key in $keys {
-        .highlight.#{$key} .code:after {
-            content: to-upper-case($key);
-            @extend %code-base;
-        }
-    }
-}
-
-$signs: ("sql", "ini", "conf", "html", "javascript", "js", "bash", "css", "scss","diff", "java", "xml", "python", "json", "swift", "ruby", "perl", "php", "c", "java", "cpp", "ts");
-@include code-signs($signs);
-
-.highlight.cpp .code:after {
-    content: 'C++';
-}
-
-pre {
-    color: #525252;
-
-    .comment,
-    .quote {
-        color: #998;
-        font-style: italic
-    }
-    .keyword,
-    .selector-tag,
-    .subst {
-        color: #333;
-        font-weight: bold
-    }
-    .number,
-    .literal,
-    .variable,
-    .template-variable,
-    .tag .attr {
-        color: #008080
-    }
-    .string,
-    .doctag {
-        color: #d14
-    }
-    .title,
-    .section,
-    .selector-id {
-        color: #900;
-        font-weight: bold
-    }
-    .subst {
-        font-weight: normal
-    }
-    .type,
-    .class .title {
-        color: #458;
-        font-weight: bold
-    }
-    .tag,
-    .name,
-    .attribute {
-        color: #000080;
-        font-weight: normal
-    }
-    .regexp,
-    .link {
-        color: #009926
-    }
-    .symbol,
-    .bullet {
-        color: #990073
-    }
-    .built_in,
-    .builtin-name {
-        color: #0086b3
-    }
-    .meta {
-        color: #999;
-        font-weight: bold
-    }
-    .deletion {
-        background: #fdd
-    }
-    .addition {
-        background: #dfd
-    }
-    .emphasis {
-        font-style: italic
-    }
-    .strong {
-        font-weight: bold
     }
 }

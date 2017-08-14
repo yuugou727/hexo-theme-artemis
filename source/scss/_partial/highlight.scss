@@ -1,8 +1,9 @@
 code,
 pre {
     font-size: 0.8em;
-    background-color: #f8f8f8;
-    font-family: 'Roboto Mono', Monaco, courier, monospace;
+    background-color: #2b303b;
+    color: #F6E9B8;
+    font-family: 'Roboto Mono', monospace, Monaco, courier;
 }
 
 .highlight {
@@ -10,12 +11,13 @@ pre {
     margin: 1em 0;
     border-radius: 2px;
     line-height: 1.1em;
-    background-color: #f8f8f8;
+    background-color: #2b303b;
+    color: #c0c5ce;
     overflow-x: auto;
-    table, tr, td {
+    table, tbody, tr, td {
         width: 100%;
         border-collapse: collapse;
-        border:  0;
+        border: 0;
         padding: 0;
         margin: 0;
     }
@@ -29,7 +31,66 @@ pre {
         .line {
             width: auto;
             height: 18px;
+        }  
+
+        color: #c0c5ce;
+
+        .comment,
+        .quote {
+            color: #65737e
         }
+    
+        .variable,
+        .template-variable,
+        .tag,
+        .name,
+        .selector-id,
+        .selector-class,
+        .regexp,
+        .deletion {
+            color: #bf616a
+        }
+    
+        .number,
+        .built_in,
+        .builtin-name,
+        .literal,
+        .type,
+        .params,
+        .meta,
+        .link {
+            color: #d08770
+        }
+    
+        .attribute {
+            color: #ebcb8b
+        }
+    
+        .string,
+        .symbol,
+        .bullet,
+        .addition {
+            color: #a3be8c
+        }
+    
+        .title,
+        .section {
+            color: #8fa1b3
+        }
+    
+        .keyword,
+        .selector-tag {
+            color: #b48ead
+        }
+    
+        .emphasis {
+            font-style: italic
+        }
+    
+        .strong {
+            font-weight: bold
+        }
+    
     }
 }
 
@@ -37,7 +98,7 @@ pre {
     position: absolute;
     top: 0;
     right: 0;
-    color: #ccc;
+    color: #c0c5ce;
     text-align: right;
     font-size: 0.75em;
     padding: 5px 10px 0;
@@ -60,79 +121,4 @@ $signs: ("sql", "ini", "conf", "html", "javascript", "js", "bash", "css", "scss"
 
 .highlight.cpp .code:after {
     content: 'C++';
-}
-
-pre {
-    color: #525252;
-
-    .comment,
-    .quote {
-        color: #998;
-        font-style: italic
-    }
-    .keyword,
-    .selector-tag,
-    .subst {
-        color: #333;
-        font-weight: bold
-    }
-    .number,
-    .literal,
-    .variable,
-    .template-variable,
-    .tag .attr {
-        color: #008080
-    }
-    .string,
-    .doctag {
-        color: #d14
-    }
-    .title,
-    .section,
-    .selector-id {
-        color: #900;
-        font-weight: bold
-    }
-    .subst {
-        font-weight: normal
-    }
-    .type,
-    .class .title {
-        color: #458;
-        font-weight: bold
-    }
-    .tag,
-    .name,
-    .attribute {
-        color: #000080;
-        font-weight: normal
-    }
-    .regexp,
-    .link {
-        color: #009926
-    }
-    .symbol,
-    .bullet {
-        color: #990073
-    }
-    .built_in,
-    .builtin-name {
-        color: #0086b3
-    }
-    .meta {
-        color: #999;
-        font-weight: bold
-    }
-    .deletion {
-        background: #fdd
-    }
-    .addition {
-        background: #dfd
-    }
-    .emphasis {
-        font-style: italic
-    }
-    .strong {
-        font-weight: bold
-    }
 }
