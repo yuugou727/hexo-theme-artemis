@@ -1,69 +1,61 @@
 # Artemis
 
-A minimalist theme for [Hexo](http://hexo.io/) based on the [Apollo](https://github.com/pinggod/hexo-theme-apollo) theme.
+This is a customized [Hexo](http://hexo.io) theme forked from [Dreyer/hexo-theme-artemis](https://github.com/Dreyer/hexo-theme-artemis), which is based on theme [pinggod/hexo-theme-apollo](https://github.com/pinggod/hexo-theme-apollo).
 
-The original Apollo theme didn't appear to work with the latest version of Hexo renderer libraries since [Jade](https://jade-lang.com) is now [Pug](https://pugjs.org).
+## Added / Modified Features
 
-[Preview](http://hexo-theme-artemis.smplcty.com/) |  [Screenshot](https://i.imgur.com/PCVquML.png)
+- Fix logo alignment and content margin on mobile screen.
+- Add tags and categories of posts.
+- Change colors to dark theme.
+- Highlight code block with [Ocean theme](https://github.com/isagalaev/highlight.js/blob/master/src/styles/ocean.css)
+- Replace theme dev-dependency [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass) with [grunt-sass](https://github.com/sindresorhus/grunt-sass), which compiles SASS to CSS in Node.js. No need of Ruby anymore.
 
-## Installation
+**For other original features and configs, please refer to [Artemis](https://github.com/Dreyer/hexo-theme-artemis) and [Apollo](https://github.com/pinggod/hexo-theme-apollo).**
+
+
+## Setup
 
 ### Install
 
-```
+Install dependencies. This theme renders html layout from `.pug` files. 
+
+```bash
 npm install --save hexo-renderer-pug hexo-generator-feed hexo-generator-sitemap
-git clone https://github.com/Dreyer/hexo-theme-artemis.git themes/artemis
+```
+
+Then `cd` to your hexo project folder. Clone repo to path theme/artemis.
+```bash
+git clone https://github.com/yuugou727/hexo-theme-artemis.git themes/artemis
 ```
 
 ### Enable
 
-Modify `theme` setting in `_config.yml` to `artemis`.
+In `_config.yml`, change `theme` to `artemis`.
 
-You can override the theme options using `theme_config` in the main `_config.yml`:
+## Development - Complie SASS
 
-```yaml
-theme: artemis
-theme_config:
-  logo:
-  google_analytics: UA-12345678-9
-  copyright:
-    since: 2016
-    name: John Doe
-    url: https://www.example.org/john-doe
-  menu:
-    Home: /
-    About: /about
-    GitHub: https://github.com/Dreyer
-    RSS: /atom.xml
+Inside `/artemis` folder, install dependencies.
+
+```bash
+npm install
 ```
 
-### Update
+There are two avaliable commands to complie `/scss` to `source/css/theme.css`:
 
-```
-cd themes/artemis
-git pull
-```
+- `npm run watch` - watch `.scss` files' change and build instantly
+- `npm run build` - build for once
 
-## Requirements
-
-Test with the latest versions of the following:
-
-| Library | Min. Version |
-| --- | --- |
-| [Hexo](https://hexo.io/) | 3.3.x |
-| [Grunt](https://gruntjs.com/) | 1.0.x |
-| [Sass](http://sass-lang.com/) | 3.4.x |
-| [Pug](https://pugjs.org) | 2.0.x |
-
-**Note:** The Pug dependency is used to render the `.pug` templates in the `layout` directory when you run `hexo generate`.
 
 ## Credits
 
-This theme is largely based on the efforts of [Sean Sun](https://github.com/pinggod).
+>This theme is largely based on the efforts of [Sean Sun](https://github.com/pinggod).
+> -- [README of Artemis](https://github.com/Dreyer/hexo-theme-artemis/blob/master/README.md)
 
-According to classical Greek mythology, [Artemis](https://en.wikipedia.org/wiki/Artemis) is the twin sister of Apollo and as this theme is virtually identical to [hexo-theme-apollo](https://github.com/pinggod/hexo-theme-apollo), it seemed apt.
+And this custom theme is based on the efforts of [Matthew Dreyer](https://github.com/Dreyer), 
 
-Icons are from [IconNinja](http://www.iconninja.com/fairy-tales-icon-sets-16414).
+>According to classical Greek mythology, [Artemis](https://en.wikipedia.org/wiki/Artemis) is the twin sister of Apollo and as this theme is virtually identical to [hexo-theme-apollo](https://github.com/pinggod/hexo-theme-apollo) ...
+
+While Apollo is the god of sun, Artemis is the goddess of moon. So I make this to a dark theme.
 
 ## License
 

@@ -1,7 +1,7 @@
 {
   "name": "hexo-theme-artemis",
   "version": "1.0.0",
-  "description": "A minimalist Hexo theme inspired by the Apollo theme",
+  "description": "A dark Hexo theme inspired by the Apollo theme",
   "main": "index.js",
   "scripts": {
     "watch": "grunt dev",
@@ -9,19 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dreyer/hexo-theme-artemis"
+    "url": "https://github.com/yuugou727/hexo-theme-artemis"
   },
   "keywords": [
     "hexo",
     "theme",
     "artemis"
   ],
-  "author": "Matthew Dreyer",
+  "author": "Ronnie Chang",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Dreyer/hexo-theme-artemis/issues"
-  },
-  "homepage": "https://github.com/Dreyer/hexo-theme-artemis#readme",
+  "homepage": "https://github.com/yuugou727/hexo-theme-artemis#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
