@@ -3,12 +3,17 @@ mixin postInfo(item, showCate)
         a
         != full_date(item.date, config.date_format)
         if showCate && item.categories
-            span.categories <i class="fa fa-bookmark" aria-hidden="true"></i>
-            for category in item.categories.toArray()
-                a.post-category(href=url_for(category.path))= category.name
+            span.categories
+                for category in item.categories.toArray()
+                    a.post-category(href=url_for(category.path))= category.name
         if item.from && (is_home() || is_post())
             a.post-from(href=item.from, target='_blank', title=item.from)
                 != __('translate_original')
+        if showCate && item.tags
+            ul.tags
+                for tag in item.tags.toArray()
+                    li
+                        a.post-tag(href=url_for(tag.path))= tag.name
 
 mixin postTitle(title)
     if title
@@ -59,9 +64,3 @@ mixin post(item)
             +postInfo(item,true)
             .post-content
                 != item.content
-            if item.tags
-                p.post-tags!= __('tags') + ': '  
-                    span
-                        for tag in item.tags.toArray()
-                            a.tag(href=url_for(tag.path))=  '#' + tag.name
-                            span= ' '

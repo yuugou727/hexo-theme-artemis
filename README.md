@@ -28,6 +28,21 @@ Then `cd` to your hexo project folder. Clone repo to path theme/artemis.
 git clone https://github.com/yuugou727/hexo-theme-artemis.git themes/artemis
 ```
 
+### Create Tags page
+
+```bash
+hexo new page tags
+```
+This creates `/tags/index.md` in the `/source` folder. 
+
+And add two new lines to its front-matter block like this:
+
+```
+type: "tags"
+comments: false
+---
+```
+
 ### Enable
 
 In `_config.yml`, change `theme` to `artemis`.
@@ -48,14 +63,11 @@ There are two avaliable commands to complie `/scss` to `source/css/theme.css`:
 
 ## Credits
 
->This theme is largely based on the efforts of [Sean Sun](https://github.com/pinggod).
-> -- [README of Artemis](https://github.com/Dreyer/hexo-theme-artemis/blob/master/README.md)
-
-And this custom theme is based on the efforts of [Matthew Dreyer](https://github.com/Dreyer), 
+This theme is forked from [Dreyer/hexo-theme-artemis](https://github.com/Dreyer/hexo-theme-artemis) and partly customized.
 
 >According to classical Greek mythology, [Artemis](https://en.wikipedia.org/wiki/Artemis) is the twin sister of Apollo and as this theme is virtually identical to [hexo-theme-apollo](https://github.com/pinggod/hexo-theme-apollo) ...
 
-While Apollo is the god of sun, Artemis is the goddess of moon. So I make this to a dark theme.
+While Apollo is the god of sun, Artemis is the goddess of moon. It's literal suitable to be a night-like dark theme.
 
 ## License
 
