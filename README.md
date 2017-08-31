@@ -1,4 +1,4 @@
-# Artemis
+# Artemis-night
 
 This is a customized [Hexo](http://hexo.io) theme forked from [Dreyer/hexo-theme-artemis](https://github.com/Dreyer/hexo-theme-artemis), which is based on theme [pinggod/hexo-theme-apollo](https://github.com/pinggod/hexo-theme-apollo).
 
@@ -17,15 +17,16 @@ This is a customized [Hexo](http://hexo.io) theme forked from [Dreyer/hexo-theme
 
 ### Install
 
-Install dependencies. This theme renders html layout from `.pug` files. 
+`cd` to your hexo project folder & install dependencies. This theme renders html layout from `.pug` files. 
 
 ```bash
 npm install --save hexo-renderer-pug hexo-generator-feed hexo-generator-sitemap
 ```
 
-Then `cd` to your hexo project folder. Clone repo to path theme/artemis.
+Clone repo to path theme/artemis-night.
+
 ```bash
-git clone https://github.com/yuugou727/hexo-theme-artemis.git themes/artemis
+git clone https://github.com/yuugou727/hexo-theme-artemis-night.git themes/artemis-night
 ```
 
 ### Create Tags page
@@ -35,7 +36,7 @@ hexo new page tags
 ```
 This creates `/tags/index.md` in the `/source` folder. 
 
-And add two new lines to its front-matter block like this:
+Add two new lines to its front-matter block like this:
 
 ```
 type: "tags"
@@ -45,11 +46,11 @@ comments: false
 
 ### Enable
 
-In `_config.yml`, change `theme` to `artemis`.
+In `_config.yml`, change `theme` to `artemis-night`.
 
 ## Development - Complie SASS
 
-Inside `/artemis` folder, install dependencies.
+At `/artemis-night` folder, install dependencies.
 
 ```bash
 npm install

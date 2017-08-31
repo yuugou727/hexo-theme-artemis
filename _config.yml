@@ -1,11 +1,11 @@
-name: Artemis
-url: https://github.com/yuugou727/hexo-theme-artemis
+name: Artemis Night
+url: https://github.com/yuugou727/hexo-theme-artemis-night
 
 menu:
   Home: /
   Archives: /archives/
   Tags: /tags/
-  #GitHub: 
+  # GitHub: 
   RSS: /atom.xml
 
 favicon: /favicon.png
