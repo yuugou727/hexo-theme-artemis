@@ -1,5 +1,7 @@
 # Artemis-night
 
+![Screenshot](screenshot.png "Screenshot")
+
 This is a customized [Hexo](http://hexo.io) theme forked from [Dreyer/hexo-theme-artemis](https://github.com/Dreyer/hexo-theme-artemis), which is based on theme [pinggod/hexo-theme-apollo](https://github.com/pinggod/hexo-theme-apollo).
 
 ## Added / Modified Features
