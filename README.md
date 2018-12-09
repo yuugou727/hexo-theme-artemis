@@ -2,6 +2,8 @@
 
 ![Screenshot](screenshot.png "Screenshot")
 
+#### [LIVE DEMO](https://yuugou727.github.io/artemis-night-demo/) HERE
+
 This is a customized [Hexo](http://hexo.io) theme forked from [Dreyer/hexo-theme-artemis](https://github.com/Dreyer/hexo-theme-artemis), which is based on theme [pinggod/hexo-theme-apollo](https://github.com/pinggod/hexo-theme-apollo).
 
 ## Added / Modified Features
